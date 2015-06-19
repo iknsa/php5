@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <!-- <meta http-equiv="X-UA-Compatible" content="chrome=1, IE=edge"> -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Evaluation</title>
+    <title>PHP5</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, user-scalable = yes">
 
@@ -25,10 +25,10 @@
 
             <div class="subNav pull-right">
                 <ul class="nav nav-pills">
-                    <li><span>Bonjour </span></li>
+                    <li><a href=""><span>Bonjour Khalid</span></a></li>
                     <li class=""><a href="?bundle=authentification&action=disconnect" class="btn btn-danger">Logout</a></li>
 
-                    <li class="active"><a href="?bundle=authentification&action=login" class="btn">Login</a></li>
+                    <li class="active"><a href="?bundle=authentification&action=login" class="btn btn-primary">Login</a></li>
                 </ul>
             </div>
         </header>
@@ -36,7 +36,7 @@
 
     <div class="row-fluid">
         <div class="container">
-            body
+            <?php require_once 'src/Authentification/Ressources/views/authentification/login.php'; ?>
         </div>
     </div>
 
