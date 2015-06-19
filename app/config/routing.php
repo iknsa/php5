@@ -6,8 +6,10 @@ if(isset($_GET))
 {
     try
     {
-        if(in_array($_GET['bundle'], $bundles)) {
-
+        if(in_array(lcfirst($_GET['bundle']), $bundles)) {
+            
+            $bundle = lcfirst($_GET['bundle']);
+            
             try {
                 if(!@include("src/" . ucfirst($_GET['bundle']) . "/Ressources/config/routing.php")) {
                     throw new Exception("The required routing file was not found!");
@@ -18,11 +20,11 @@ if(isset($_GET))
                 foreach ($routes as $route) {
 
                     foreach ($route as $key => $value) {
-                        if($value == $_GET['action']) {
+                        if($value == lcfirst($_GET['action'])) {
                             
-                            $action = $value;
+                            $action = lcfirst($value);
                             
-                            $controller = $key;
+                            $controller = lcfirst($key);
                         }
 
                     }
