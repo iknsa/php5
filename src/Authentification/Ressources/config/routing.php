@@ -1,6 +1,6 @@
 <?php
     
-    $action = [
-        "login",
-        "disconnect"
+    $routes = [
+        ["authentification" => "login"],
+        ["authentification" => "logout"]
     ];
