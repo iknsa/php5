@@ -1,0 +1,45 @@
+index de la page authentification
+
+
+<table>
+    <tr>
+        <td>
+            Nom:
+        </td>
+        <td>
+            Infos
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Prénom:
+        </td>
+        <td>
+            Infos
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Email:
+        </td>
+        <td>
+            Infos
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Phone:
+        </td>
+        <td>
+            Infos
+        </td>
+    </tr>
+    <tr>
+        <td>
+            cv:
+        </td>
+        <td>
+            Infos
+        </td>
+    </tr>
+</table>
