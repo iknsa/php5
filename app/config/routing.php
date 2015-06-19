@@ -17,14 +17,14 @@ if(isset($_GET))
 
                 foreach ($routes as $route) {
 
-                    foreach ($route as $controllers => $actions) {
-                        if($controllers == $_GET['bundle']) {
-                            $controller = $_GET['bundle'];
+                    foreach ($route as $key => $value) {
+                        if($value == $_GET['action']) {
+                            
+                            $action = $value;
+                            
+                            $controller = $key;
                         }
 
-                        if($actions == $_GET['action']) {
-                            $action = $_GET['action'];
-                        }
                     }
                 }
 
