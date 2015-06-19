@@ -11,4 +11,7 @@ if(isset($bundle) && isset($controller) && isset($action))
     $actionName = $action . 'Action';
 
     $$controller->$actionName();
+
+    if(!empty($$controller->$actionName()))
+        $controllerReturn = $$controller->$actionName();
 }

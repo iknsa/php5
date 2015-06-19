@@ -36,7 +36,18 @@
 
     <div class="row-fluid">
         <div class="container">
-            <?php require_once 'src/Authentification/Ressources/views/authentification/login.php'; ?>
+            <?php
+                try
+                {
+                    if(isset($bundle) && isset($controllerReturn['template'])) {
+                        require_once "src/" . ucfirst($bundle) . "/Ressources/views/" . lcfirst($bundle) . "/" . lcfirst($controllerReturn['template']) . ".php";
+                    } else {
+                        throw new Exception("A problem has been found while looking for the template");
+                    }
+                } catch (Exception $e) {
+                    $error = $e->getMessage();
+                }
+            ?>
         </div>
     </div>
 

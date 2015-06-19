@@ -1,6 +1,6 @@
 <?php
 
-$bundles = ['authentification'];
+$bundles = ['authentification', 'user'];
 
 if(isset($_GET))
 {
