@@ -6,6 +6,8 @@ class Authentification
 {
     public function loginAction()
     {
-        var_dump("expression");
+        return array(
+            'template' => 'login'
+        );
     }
 }
