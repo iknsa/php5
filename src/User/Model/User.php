@@ -10,13 +10,21 @@ class User
     protected $surname;
     protected $phone;
 
+    public function __construct(array $data)
+    {
+        $this->populate($data);
+    }
+
     public function populate(array $data)
     {
         foreach ($data as $key => $value) {
-            $setter = 'set'.ucfirst($key);
-                
-            if (method_exists($this, $setter)) {
-                $this->$setter($value);
+
+            foreach ($value as $setter => $val) {
+                $setter = 'set'.ucfirst($setter);
+
+                if (method_exists($this, $setter)) {
+                    $this->$setter($val);
+                }
             }
         }
     }
