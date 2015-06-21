@@ -2,7 +2,7 @@
 
 namespace Authentification\Controller;
 
-class Authentification
+class AuthentificationController
 {
     public function loginAction()
     {
